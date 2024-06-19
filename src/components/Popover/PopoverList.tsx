@@ -3,6 +3,8 @@ import cn from "clsx";
 import { usePopoverContext } from "./PopoverProvider";
 import useOnClickOutside from "../../hooks/useOnClickOutside";
 
+import "./Popover.css";
+
 interface IProps extends ComponentPropsWithoutRef<"div"> {
   show?: boolean;
 }
@@ -15,14 +17,7 @@ const PopoverList = ({ children, className, ...rest }: IProps) => {
   if (!props.open) return null;
 
   return (
-    <div
-      {...rest}
-      ref={ref}
-      className={cn(
-        "bg-white rounded shadow p-5 flex flex-col absolute top-12 right-0",
-        className
-      )}
-    >
+    <div {...rest} ref={ref} className={cn("list", className)}>
       {children}
     </div>
   );

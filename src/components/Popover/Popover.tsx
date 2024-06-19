@@ -5,6 +5,8 @@ import PopoverButton from "./PopoverButton";
 import PopoverList from "./PopoverList";
 import PopoverListItem from "./PopoverListItem";
 
+import "./Popover.css";
+
 interface IProps extends ComponentPropsWithoutRef<"div"> {}
 
 const PopoverComponent = ({ className, children, ...rest }: IProps) => {
@@ -15,7 +17,7 @@ const PopoverComponent = ({ className, children, ...rest }: IProps) => {
 
   return (
     <PopoverContext.Provider value={{ open, onOpen, onClose }}>
-      <div {...rest} className={cn("relative", className)}>
+      <div {...rest} className={cn("container", className)}>
         {children}
       </div>
     </PopoverContext.Provider>
