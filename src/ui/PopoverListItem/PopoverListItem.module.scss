@@ -1,0 +1,17 @@
+.btn {
+   padding: 10px 20px;
+   border: none;
+   min-width: 200px;
+   border-radius: 0;
+
+   &:hover {
+      background-color: aliceblue;
+   }
+
+   &:focus,
+   &:focus-visible {
+      outline: none;
+   }
+
+   border-bottom: 1px solid lightsteelblue;
+}

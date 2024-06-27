@@ -2,7 +2,7 @@ import React from "react";
 import { TUser } from "./types/TUser";
 import { getUsers } from "./utils/getUsers";
 import Popover from "./components/Popover/Popover";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   const [data, setData] = React.useState<TUser[]>([]);

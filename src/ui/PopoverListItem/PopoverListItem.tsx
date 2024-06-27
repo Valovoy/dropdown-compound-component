@@ -1,6 +1,8 @@
 import { ComponentPropsWithoutRef } from "react";
 import cn from "clsx";
-import { usePopoverContext } from "./PopoverProvider";
+import { usePopoverContext } from "../../context/PopoverProvider";
+
+import styles from "./PopoverListItem.module.scss"
 
 interface IProps extends ComponentPropsWithoutRef<"button"> {}
 
@@ -13,7 +15,7 @@ const PopoverListItem = ({ onClick, className, children }: IProps) => {
         onClick?.(e);
         props.onClose();
       }}
-      className={cn("", className)}
+      className={cn(styles.btn, className)}
     >
       {children}
     </button>
