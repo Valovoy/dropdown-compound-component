@@ -1,9 +1,9 @@
 import { ComponentPropsWithoutRef } from "react";
 import cn from "clsx";
-import { usePopoverContext } from "./PopoverProvider";
+import { usePopoverContext } from "../../context/PopoverProvider";
 import useOnClickOutside from "../../hooks/useOnClickOutside";
 
-import "./Popover.css";
+import styles from "./PopoverList.module.scss";
 
 interface IProps extends ComponentPropsWithoutRef<"div"> {
   show?: boolean;
@@ -17,7 +17,7 @@ const PopoverList = ({ children, className, ...rest }: IProps) => {
   if (!props.open) return null;
 
   return (
-    <div {...rest} ref={ref} className={cn("list", className)}>
+    <div {...rest} ref={ref} className={cn(styles.list, className)}>
       {children}
     </div>
   );

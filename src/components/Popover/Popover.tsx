@@ -1,11 +1,8 @@
 import { ComponentPropsWithoutRef, useState } from "react";
-import cn from "clsx";
-import { PopoverContext } from "./PopoverProvider";
-import PopoverButton from "./PopoverButton";
-import PopoverList from "./PopoverList";
-import PopoverListItem from "./PopoverListItem";
-
-import "./Popover.css";
+import { PopoverContext } from "../../context/PopoverProvider";
+import PopoverButton from "../../ui/PopoverButton/PopoverButton";
+import PopoverList from "../../ui/PopoverList/PopoverList";
+import PopoverListItem from "../../ui/PopoverListItem/PopoverListItem";
 
 interface IProps extends ComponentPropsWithoutRef<"div"> {}
 
@@ -17,7 +14,7 @@ const PopoverComponent = ({ className, children, ...rest }: IProps) => {
 
   return (
     <PopoverContext.Provider value={{ open, onOpen, onClose }}>
-      <div {...rest} className={cn("container", className)}>
+      <div {...rest} style={{position: 'relative'}} className={className}>
         {children}
       </div>
     </PopoverContext.Provider>

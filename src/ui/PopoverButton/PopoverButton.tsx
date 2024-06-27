@@ -1,8 +1,6 @@
 import { ComponentPropsWithoutRef } from "react";
 import cn from "clsx";
-import { usePopoverContext } from "./PopoverProvider";
-
-import "./Popover.css";
+import { usePopoverContext } from "../../context/PopoverProvider";
 
 interface IProps extends ComponentPropsWithoutRef<"button"> {}
 
