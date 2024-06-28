@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef } from "react";
 import cn from "clsx";
-import { useDropDownContext } from "../../context/DropDownProvider";
+import { useDropDownContext } from "../../../context/DropDownProvider";
 
 import styles from "./DropDownList.module.scss";
 

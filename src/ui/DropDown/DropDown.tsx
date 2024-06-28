@@ -1,8 +1,8 @@
 import { ComponentPropsWithoutRef, useState } from "react";
 import { DropDownContext } from "../../context/DropDownProvider";
-import DropDownButton from "../DropDownButton/DropDownButton";
-import DropDownList from "../DropDownList/DropDownList";
-import DropDownListItem from "../DropDownListItem/DropDownListItem";
+import DropDownButton from "./DropDownButton/DropDownButton";
+import DropDownList from "./DropDownList/DropDownList";
+import DropDownListItem from "./DropDownListItem/DropDownListItem";
 
 interface IProps extends ComponentPropsWithoutRef<"div"> {}
 

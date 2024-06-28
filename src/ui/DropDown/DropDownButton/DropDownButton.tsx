@@ -1,7 +1,7 @@
 import { ComponentPropsWithoutRef } from "react";
 import cn from "clsx";
-import { useDropDownContext } from "../../context/DropDownProvider";
-import useOnClickOutside from "../../hooks/useOnClickOutside";
+import { useDropDownContext } from "../../../context/DropDownProvider";
+import useOnClickOutside from "../../../hooks/useOnClickOutside";
 
 import styles from "./DropDownButton.module.scss"
 
