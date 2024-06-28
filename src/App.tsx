@@ -1,7 +1,8 @@
 import React from "react";
 import { TUser } from "./types/TUser";
 import { getUsers } from "./utils/getUsers";
-import Popover from "./components/Popover/Popover";
+import DropDown from "./ui/DropDown/DropDown";
+
 import "./App.scss";
 
 function App() {
@@ -19,16 +20,16 @@ function App() {
 
   return (
     <div className="App">
-      <Popover>
-        <Popover.Button>Popover!</Popover.Button>
-        <Popover.List>
+      <DropDown>
+        <DropDown.Button>DropDown!</DropDown.Button>
+        <DropDown.List>
           {data.map((x) => (
-            <Popover.ListItem key={x.firstname}>
+            <DropDown.ListItem key={x.firstname}>
               {x.firstname} {x.lastname}
-            </Popover.ListItem>
+            </DropDown.ListItem>
           ))}
-        </Popover.List>
-      </Popover>
+        </DropDown.List>
+      </DropDown>
     </div>
   );
 }
